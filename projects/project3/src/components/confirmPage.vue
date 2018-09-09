@@ -9,7 +9,8 @@
     <p>name:{{user.firstName}}</p>
     <p>name:{{$store.state.userProfile.firstName}}</p>
     <!-- <p>name:{{$userProfile1.firstName}}</p> -->
-    <button @click="resetStore">Reset</button>
+    <button @click="resetStore()">Reset</button>
+    <button @click="navigate()">confirm</button>
   </div>
 </template>
 
@@ -31,6 +32,9 @@ export default {
   methods:{
       resetStore(){
           this.$store.commit('reset')
+      },
+      navigate(){
+        router.push('/activationPage')
       }
   }
 };

@@ -19,16 +19,16 @@ import router from "../router";
 export default {
   name: "createProfile",
   computed: {
-    // user(){
-    //    // return this.$store.state.userProfile
-    //   // return this.$userProfile1
-    // }
+    user(){
+       return this.$store.state.userProfile
+      // return this.$userProfile1
+    }
   },
   data() {
     return {
       message: this.$route.query.name,
       // user:  this.$store.state.userProfile
-      user: this.$userProfile1
+      // user: this.$userProfile1
     };
   },
   methods: {
